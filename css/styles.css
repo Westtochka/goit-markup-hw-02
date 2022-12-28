@@ -1,10 +1,11 @@
 :root{    
     --logo-font:'Raleway', sans-serif;
     --primary-font:'Roboto', sans-serif;
-    --accent-color:#b78710; 
+    --accent-color:orange; 
     --primary-text-color:#2E2F42;
     --secondary-text-color:#434455;
     --link-background-color:#4D5AE5;
+    --white-font:#FFFFFF;
 }
 
 .list{
@@ -14,6 +15,11 @@
     text-decoration: none;
 }
 /* =============HEADER ============= */
+body{
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+}
+
 .logo{
     font-family: var(--logo-font);
     text-transform: uppercase;
@@ -23,17 +29,14 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
-    color: var(--primary-text-colo);
+    color: var(--primary-text-color);
 }
 
 
 .first-part-logo{
     color:var(--link-background-color);
-    }
-
-body{
-    font-family: var(--primary-font);
 }
+
 
 /*.main-header{}
 .menu{}*/
@@ -43,8 +46,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color:var(--primary-text-color);
-}
+    }
 
 .menu-link:hover, .menu-link:focus {
     color: var(--accent-color); 
@@ -52,8 +54,7 @@ body{
 
 
 
-.contact-email .contact-phone-number{
-    font-weight: 400;
+.contact-email, .contact-phone-number{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -72,19 +73,19 @@ body{
 
 /* =================COMPONENTS======== */
 .modal-btn{
-    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     display: flex;
     align-items: center;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: var(--white-font);
     background: var(--link-background-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;     
     cursor: pointer;
 }
+
 .modal-btn:hover, 
 .modal-btn:focus{
     color:var(--accent-color);
@@ -93,7 +94,14 @@ body{
 
 .dark-theme{
     background-color:var(--primary-text-color);
-    color: #FFFFFF;
+    color: var(--white-font);
+}
+
+.info-footer{
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #E7E9FC;
 }
 
 /*=================/COMPONENTS======== */
@@ -106,27 +114,53 @@ body{
     left: 0px;
     top: 72px;*/
 }
-.hero-tittle{
-    
-    font-weight: 700;
+.hero-tittle{    
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
 }
+/*.tools{
+}
+/functions{
 
-.title-section{
-    
+}*/
+
+.title-tools{
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--primary-text-color);
+    }
+
+.title-functions{
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 
 
+/*.team{}*/
+
+
+.subteam-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;   
+}
+
+.paragraph-team{
+    font-size: 16px;
+    line-height: 24px;
+    /*text-align: center;*/
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+}
+
 .section-description{    
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -136,6 +170,10 @@ body{
 
 
 /* ================PORTFOLIO=========== */
+/*.links-page{
+
+}*/
+
 .main-font-navigation{
     font-family: var(--primary-font);
     font-weight: 500;
@@ -145,23 +183,22 @@ body{
     cursor: pointer;
 }
 
+
 .main-font-navigation:hover, 
 .main-font-navigation:focus {
     color: var(--accent-color); 
 }
 
 .main-font-image{
-    font-family: var(--primary-font);
+    /*font-family: var(--primary-font);*/
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--primary-text-color);
 }
 
 .secondary-font-image{
-    font-family: var(--primary-font);
-    font-weight: 400;
+    /*font-family: var(--primary-font);*/
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -170,7 +207,7 @@ body{
 
 .first-button{
     background-color: #404BBF;
-    color: #FFFFFF;    
+    color: var(--white-font);    
 }
 
 .primary-theme-button{
@@ -181,8 +218,6 @@ body{
 
 .secondary-link-image{
     background-color: var(--link-background-color);
-    font-family: 'Roboto';
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -190,3 +225,16 @@ body{
 }
 
 /* ================/PORTFOLIO=========== */
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
