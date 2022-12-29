@@ -29,6 +29,7 @@ body{
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
+    font-family: var(--primary-font);
     color: var(--primary-text-color);
 }
 
@@ -46,6 +47,8 @@ body{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
     }
 
 .menu-link:hover, .menu-link:focus {
